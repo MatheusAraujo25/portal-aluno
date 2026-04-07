@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 02 | Autenticação no Windows</title>
+    <link rel="stylesheet" href="../style-home.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🔑 Autenticação Sem Senha</h1>
+      <p>Configurando o Git Credential Manager no Windows</p>
+      <a href="../git.html" class="back-link">← Voltar para Trilhas Git</a>
+    </header>
+
+    <main class="container">
+      <section class="card" style="border-left: 5px solid #f59e0b">
+        <h3>🧐 Cansado de digitar a senha?</h3>
+        <p>
+          Sempre que você faz um <code>git push</code> ou <code>pull</code>, o
+          Git pede suas credenciais. No Windows, podemos automatizar isso usando
+          o <strong>GCM (Git Credential Manager)</strong>.
+        </p>
+      </section>
+
+      <section class="cheat-sheet">
+        <h2>🛠️ Como Ativar (Passo a Passo)</h2>
+
+        <div class="code-block">
+          <code>Passo 1</code>
+          <p>Abra o seu <strong>Git Bash</strong> (ou Terminal do Windows).</p>
+        </div>
+
+        <div class="code-block">
+          <code>Passo 2</code>
+          <p>
+            Digite o comando abaixo para ativar o gerenciador de credenciais:
+          </p>
+        </div>
+
+        <div
+          style="
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+            margin-bottom: 1rem;
+          "
+        >
+          git config --global credential.helper manager
+        </div>
+
+        <div class="code-block">
+          <code>Passo 3</code>
+          <p>
+            Na próxima vez que você der um <code>git push</code>, abrirá uma
+            janela do Windows pedindo para você logar no navegador.
+            <strong>Logue uma única vez e pronto!</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="resources-section">
+        <h2>💡 Dica de Mestre</h2>
+        <div class="resource-card">
+          <h4>Onde ficam guardadas?</h4>
+          <p>
+            O Windows guarda essas senhas no
+            <strong>"Gerenciador de Credenciais"</strong> do próprio Painel de
+            Controle. Se você trocar de senha no GitHub, é lá que você deve
+            apagar a antiga.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Matheus Ribeiro - Professor SEDUC-SP | mribeiro.dev</p>
+    </footer>
+  </body>
+</html>

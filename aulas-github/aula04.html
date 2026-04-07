@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 04 | Trabalhando com Branches</title>
+    <link rel="stylesheet" href="../style-home.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🌿 Criando Branches</h1>
+      <p>Trabalhe em novas funcionalidades sem medo de errar.</p>
+      <a href="../git.html" class="back-link">← Voltar para Trilhas Git</a>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h3>🌳 O que é uma Branch?</h3>
+        <p>
+          Imagine que o seu código é o tronco de uma árvore (a
+          <code>main</code>). Uma <strong>Branch</strong> é um galho que sai
+          desse tronco.
+        </p>
+        <p>
+          Você pode testar coisas novas no galho. Se der errado, o tronco
+          continua intacto!
+        </p>
+      </section>
+
+      <section class="cheat-sheet">
+        <h2>🛠️ Comandos de Ramificação</h2>
+
+        <div class="code-block">
+          <code>git checkout -b nome</code>
+          <p>Cria uma nova branch e já "pula" para dentro dela.</p>
+        </div>
+
+        <div class="code-block">
+          <code>git branch</code>
+          <p>
+            Lista todas as branches. A que estiver com asterisco (*) é a que
+            você está usando.
+          </p>
+        </div>
+
+        <div class="code-block">
+          <code>git checkout main</code>
+          <p>Volta para a branch principal (o tronco da árvore).</p>
+        </div>
+
+        <div class="code-block">
+          <code>git merge nome</code>
+          <p>Une as alterações do seu "galho" de volta ao tronco principal.</p>
+        </div>
+      </section>
+
+      <section class="resources-section">
+        <h2>💡 Dica para o TCC</h2>
+        <div class="resource-card" style="border-left-color: #10b981">
+          <h4>Organização em Grupo</h4>
+          <p>
+            Cada aluno deve ter sua própria branch (ex:
+            <code>dev-matheus</code>). Nunca façam commits direto na
+            <code>main</code> ao mesmo tempo para evitar conflitos!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Professor Matheus Ribeiro | SEDUC-SP</p>
+    </footer>
+  </body>
+</html>

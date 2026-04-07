@@ -1,0 +1,97 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 10;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.page-title {
+  margin-bottom: 3.5rem;
+  padding: 1.5rem;
+}
+
+.center-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 4.5rem;
+  background-color: #1e293b;
+}
+
+.title {
+  font-size: 2rem;
+  padding-left: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  flex: 2;
+  height: 35rem;
+  background-color: rgb(212, 44, 81);
+  padding: 2rem;
+  color: white;
+}
+
+.text,
+li {
+  justify-self: center;
+  font-size: 1.5rem;
+}
+
+.layout {
+  flex: 4;
+  height: auto;
+  width: auto;
+  background-color: rgb(0, 134, 252);
+  padding: 1.5rem;
+  /* Apenas para diminuir o layout e dar enfase nele. */
+  margin: 1.5rem;
+}
+
+/* layout content */
+.header-project {
+  display: flex;
+  justify-content: center;
+  background-color: coral;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-and-dates {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  height: 30rem;
+}
+
+.tasks {
+  flex: 3;
+  background-color: bisque;
+  justify-items: start;
+  font-size: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.dates {
+  flex: 1;
+  background-color: chocolate;
+  font-size: 1.1rem;
+  padding-left: 1.2rem;
+}
+
+.coments-title {
+  padding-left: 1.2rem;
+  padding: 1.5rem;
+  margin-bottom: 0;
+}
+
+.coments {
+  background-color: rgb(164, 151, 240);
+  font-size: 1rem;
+}
+
+.coment-box {
+  background-color: rgb(111, 101, 247);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}

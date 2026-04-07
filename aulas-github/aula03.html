@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 03 | Fluxo Básico do Git</title>
+    <link rel="stylesheet" href="../style-home.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🚀 O Ciclo de Vida do Código</h1>
+      <p>Entendendo o Add, Commit e Push na prática.</p>
+      <a href="../git.html" class="back-link">← Voltar para Trilhas Git</a>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h3>📦 Os 3 Estados do Git</h3>
+        <p>Imagine que você está preparando uma encomenda:</p>
+        <ul style="text-align: left; display: inline-block">
+          <li>
+            <strong>Working Directory:</strong> Sua mesa de trabalho (arquivos
+            alterados).
+          </li>
+          <li>
+            <strong>Staging Area (Add):</strong> Colocar o item dentro da caixa
+            de envio.
+          </li>
+          <li>
+            <strong>Repository (Commit):</strong> Lacrar a caixa e colocar um
+            selo com data e nome.
+          </li>
+        </ul>
+      </section>
+
+      <section class="cheat-sheet">
+        <h2>💻 Comandos na Ordem Correta</h2>
+
+        <div class="code-block">
+          <code>git add .</code>
+          <p>
+            Prepara <strong>todos</strong> os arquivos alterados para o envio.
+          </p>
+        </div>
+
+        <div class="code-block">
+          <code>git commit -m "texto"</code>
+          <p>
+            Cria uma versão local. Use mensagens claras como:
+            <em>"Ajuste no layout do login"</em>.
+          </p>
+        </div>
+
+        <div class="code-block">
+          <code>git push origin main</code>
+          <p>Envia sua "caixa lacrada" para o servidor do GitHub.</p>
+        </div>
+      </section>
+
+      <section class="resources-section">
+        <h2>⚠️ Erro Comum de Aluno</h2>
+        <div class="resource-card" style="border-left-color: #ef4444">
+          <h4>Esquecer o Commit</h4>
+          <p>
+            Muitos alunos tentam dar <strong>Push</strong> direto após o
+            <strong>Add</strong>. Lembre-se: O Push envia Commits, não arquivos
+            soltos!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Matheus Ribeiro - Versionamento & Mobile | SEDUC-SP</p>
+    </footer>
+  </body>
+</html>

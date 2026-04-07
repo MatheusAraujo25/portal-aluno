@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configurando GitHub no Windows | Guia Prático</title>
+    <link rel="stylesheet" href="/css/git-hub-css/aula01.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Git & GitHub no Windows</h1>
+      <p>Do Zero ao seu primeiro Push</p>
+      <a
+        href="../index.html"
+        style="color: white; text-decoration: none; font-size: 0.9rem"
+        >← Voltar para Home</a
+      >
+    </header>
+
+    <main class="container">
+      <section class="step">
+        <h2>1. Preparando o Ambiente</h2>
+        <p>Primeiro, precisamos instalar o Git no Windows:</p>
+        <ul>
+          <li>
+            Baixe o instalador em:
+            <a href="https://git-scm.com/download/win" target="_blank"
+              >git-scm.com</a
+            >
+          </li>
+          <li>
+            Durante a instalação, mantenha as opções padrão, mas certifique-se
+            de selecionar o <strong>Git Bash</strong>.
+          </li>
+        </ul>
+      </section>
+
+      <section class="step">
+        <h2>2. Configurando sua Identidade</h2>
+        <p>
+          Abra o <strong>Git Bash</strong> ou o Terminal e execute os comandos
+          abaixo com seus dados do GitHub:
+        </p>
+        <div class="code-block-vertical">
+          <code>git config --global user.name "Seu Nome"</code>
+          <code>git config --global user.email "seuemail@exemplo.com"</code>
+        </div>
+      </section>
+
+      <section class="step">
+        <h2>3. Primeiro Push (Subindo seu código)</h2>
+        <p>Dentro da pasta do seu projeto mobile, siga esta sequência:</p>
+        <div class="code-block-vertical">
+          <p># Inicia o repositório</p>
+          <code>git init</code>
+
+          <p># Conecta ao GitHub (substitua pelo link do seu repo)</p>
+          <code
+            >git remote add origin https://github.com/usuario/projeto.git</code
+          >
+
+          <p># Adiciona, Comita e Envia</p>
+          <code>git add .</code>
+          <code>git commit -m "Primeiro commit"</code>
+          <code>git push -u origin main</code>
+        </div>
+      </section>
+
+      <section class="step">
+        <h2>4. Mantendo-se atualizado (Pull)</h2>
+        <p>
+          Sempre que trabalhar em grupo ou trocar de computador, baixe as
+          novidades:
+        </p>
+        <div class="code-block-vertical">
+          <code>git pull origin main</code>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Dica: Use o <strong>Git Credential Manager</strong> (já vem no
+        instalador) para não precisar digitar senha toda hora.
+      </p>
+    </footer>
+  </body>
+</html>
