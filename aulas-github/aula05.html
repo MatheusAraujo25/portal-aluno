@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aula 02</title>
+    <title>Aula 04</title>
     <link rel="stylesheet" href="../style-home.css" />
     <style>
       body {
@@ -113,66 +113,53 @@
   </head>
   <body>
     <header>
-      <h1>🚀 Dominando o Git Clone</h1>
-      <p>
-        Aprenda a baixar projetos do GitHub para o seu computador de forma
-        profissional.
-      </p>
+      <h1>🌿 Criando Branches</h1>
+      <p>Trabalhe em novas funcionalidades sem medo de errar.</p>
     </header>
 
     <main class="container">
       <section class="step">
-        <h2>🛠️ Como Ativar (Passo a Passo)</h2>
-        <h2>Passo 1</h2>
-        <h3>Copiar a URL do Repositório</h3>
+        <h2>📦 Os 3 Estados do Git</h2>
+        <ul>
+          <li>Working Directory: Sua mesa de trabalho (arquivos alterados).</li>
+
+          <li>Staging Area (Add): Colocar o item dentro da caixa de envio.</li>
+          <li>
+            Repository (Commit): Lacrar a caixa e colocar um selo com data
+            enome.
+          </li>
+        </ul>
+        <br />
+      </section>
+
+      <section class="step">
+        <h2>💻 Comandos na Ordem Correta</h2>
+        <h3>Lembre-se essa é a base para o uso de branches.</h3>
         <p>
-          No GitHub, acesse o repositório desejado, clique no botão Code e copie
-          a URL HTTPS.
+          <strong style="color: #a302ee">git checkout -b nome </strong> - Cria
+          uma nova branch e já "pula" para dentro dela. .
         </p>
-      </section>
-
-      <section class="step">
-        <h2>Passo 2</h2>
-        <h3>Abrir o Terminal</h3>
         <p>
-          Abra o seu terminal (Git Bash, CMD ou PowerShell) e navegue até a
-          pasta onde deseja salvar o projeto:
+          <strong style="color: #a302ee"> git branch </strong> - CLista todas as
+          branches. A que estiver com asterisco (*) é a que você está usando.
         </p>
-        <div class="code-block-vertical">
-          <code>cd Documents/Desktop </code>
-        </div>
-      </section>
-
-      <section class="step">
-        <h2>Passo 3:</h2>
-        <h3>Executar o Clone</h3>
-        <p>Agora, execute o comando seguido da URL que você copiou:</p>
-
-        <div class="code-block-vertical">
-          <code>gh repo clone MatheusAraujo25/portal-aluno</code>
-        </div>
-      </section>
-
-      <section class="step">
-        <h2>Passo 4:</h2>
-        <h3>Acessar a Pasta</h3>
         <p>
-          O Git criará uma pasta com o nome do repositório. Entre nela para
-          começar a trabalhar:
+          <strong style="color: #a302ee">git checkout main </strong> - Volta
+          para a branch principal (o tronco da árvore). <br />
         </p>
-
-        <div class="code-block-vertical">
-          <code>cd portal-aluno</code>
-        </div>
+        <p>
+          <strong style="color: #a302ee">git merge nome </strong> - Une as
+          alterações do seu "galho" de volta ao tronco principal.
+        </p>
+        <br />
       </section>
 
       <section class="step">
-        <h2>Resultado:</h2>
-        <p>Diretório de trabalho funcionando</p>
+        <h2>💡 Dica para o TCC</h2>
+        <h3>Organização em Grupo</h3>
         <p>
-          <strong
-            >Agora você pode clonar e modelar o projeto que quiser.</strong
-          >
+          Cada aluno deve ter sua própria branch (ex: dev-matheus). Nunca façam
+          commits direto na main ao mesmo tempo para evitar conflitos!
         </p>
       </section>
 

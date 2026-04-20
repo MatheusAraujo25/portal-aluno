@@ -55,7 +55,10 @@ header p {
 /* Container Principal */
 .container {
   max-width: 1000px;
-  margin: -40px auto 40px; /* Sobe um pouco para sobrepor o header */
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Este é o seu espaço azul automático entre seções */
   padding: 0 20px;
 }
 
@@ -64,7 +67,7 @@ header p {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
-  justify-content: center;
+  margin-top: 1rem;
 }
 
 .card {
@@ -121,7 +124,7 @@ header p {
   align-items: center;
   gap: 1.5rem;
   background: var(--white);
-  padding: 1rem 1.5rem;
+  padding: 1.2rem;
   margin-bottom: 1rem;
   border-radius: 8px;
   border-left: 5px solid var(--primary);
@@ -131,11 +134,11 @@ header p {
 .code-block code {
   font-family: "Consolas", monospace;
   background: #f1f5f9;
-  padding: 4px 8px;
+  padding: 4px 12px;
   border-radius: 4px;
   font-weight: bold;
   color: var(--dark);
-  min-width: 80px;
+  min-width: 100px; /* Um pouco maior para caber "README.md" */
   text-align: center;
 }
 
@@ -174,10 +177,9 @@ code {
 
 /* Barra de Progresso */
 .progress-container {
-  margin-top: 2rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
+  background: var(--white);
+  padding: 2rem; /* Aumentei um pouco para combinar com os cards */
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -213,8 +215,14 @@ code {
 
 /* Seção de Links Úteis (Recursos) */
 .resources-section {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  border-top: 1px solid #e2e8f0; /* Uma linha bem leve para separar as áreas */
+}
+
+section {
+  margin-bottom: 2rem; /* Garante que nenhuma seção "grude" na de baixo */
 }
 
 .resources-grid {
@@ -263,7 +271,6 @@ code {
   align-items: center;
   justify-content: center;
 }
-
 
 /* dark mod */
 

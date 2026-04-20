@@ -270,3 +270,181 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+/* dark mod */
+
+/* Variáveis SRE Dark Mode */
+:root {
+  --primary: #58a6ff;
+  --bg-body: #0d1117;
+  --bg-card: #161b22;
+  --bg-item: #21262d;
+  --border: #30363d;
+  --text-main: #e6edf3;
+  --text-muted: #8b949e;
+  --white: #ffffff;
+  --success: #238636;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #010409;
+  color: var(--white);
+  padding: 3rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+header p {
+  color: var(--text-muted);
+}
+
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0 20px;
+}
+
+/* Barra de Progresso SRE */
+.progress-container {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.progress-label {
+  font-weight: bold;
+  color: var(--text-main);
+}
+.progress-value {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.progress-bar-bg {
+  background-color: #30363d;
+  border-radius: 20px;
+  height: 12px;
+  margin-top: 10px;
+}
+
+.progress-bar-fill {
+  background-color: var(--primary);
+  height: 12px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+}
+
+/* Cards de Repositório e Docs */
+.card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  flex: 1;
+  min-width: 300px;
+}
+
+.btn {
+  background: var(--success);
+  color: var(--white);
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2ea043;
+}
+
+/* Seção de Entregas (Visual de Timeline) */
+.cheat-sheet {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.code-block {
+  background: var(--bg-item);
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.code-block code {
+  background: #0d1117;
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Recursos e Referências */
+.resources-section {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+.resource-card {
+  background: var(--bg-item);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+}
+
+.resource-card h4 {
+  color: var(--text-main);
+  margin: 0;
+}
+.resource-card p {
+  color: var(--text-muted);
+}
+.resource-link {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.resource-placeholder {
+  background: transparent;
+  border: 2px dashed var(--border);
+  color: var(--text-muted);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 2rem;
+}

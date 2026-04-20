@@ -168,8 +168,8 @@ header h1 {
 
 .tcc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -210,4 +210,154 @@ header h1 {
 
 .btn-tcc:hover {
   background: #2563eb;
+}
+
+/* /* 1. Definições de Variáveis Dark */
+:root {
+  --primary: #58a6ff; /* Azul mais claro para brilhar no escuro */
+  --bg-body: #0d1117; /* Fundo principal (estilo GitHub Dark) */
+  --bg-card: #161b22; /* Fundo dos cards */
+  --bg-item: #21262d; /* Fundo de itens de lista */
+  --border: #30363d; /* Cor das bordas padrão */
+  --text-main: #e6edf3; /* Texto principal */
+  --text-muted: #8b949e; /* Texto secundário */
+  --success: #238636; /* Verde para botões de ação */
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+}
+
+header {
+  background-color: #010409;
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+header p {
+  color: var(--text-muted);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 2. Grid de Aulas (Topo) */
+.card {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  flex: 1;
+  min-width: 300px;
+  box-shadow: none; /* Em dark mode, bordas funcionam melhor que sombras */
+}
+
+.card h3 {
+  color: #fff;
+}
+.card p {
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: #0d1117; /* Texto escuro no botão claro dá leitura imediata */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: filter 0.2s;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+}
+
+/* 3. Lista de Lições (Dentro de Mobile/Git) */
+.lesson-item {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.lesson-item:hover {
+  transform: translateX(10px);
+  border-color: var(--primary);
+  background: #1c2128;
+}
+
+.lesson-icon {
+  background: var(--bg-item);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+.lesson-info h3 {
+  color: var(--text-main);
+}
+.lesson-info p {
+  color: var(--text-muted);
+}
+
+.btn-open {
+  background: var(--bg-item);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.btn-open:hover {
+  background: var(--border);
+}
+
+/* 4. Orientação de TCC (Cards de baixo) */
+.tcc-card {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-bottom: 4px solid var(--primary);
+  box-shadow: none;
+}
+
+.tcc-card.pending {
+  border-bottom-color: #484f58;
+  opacity: 0.6;
+  background: #0d1117;
+}
+
+.btn-tcc {
+  background: var(--bg-item);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  transition: 0.3s;
+}
+
+.btn-tcc:hover {
+  background: var(--primary);
+  color: #0d1117;
+}
+
+/* Ajuste do Link de Voltar */
+.back-link {
+  color: var(--text-muted);
+}
+
+.back-link:hover {
+  color: var(--primary);
 }

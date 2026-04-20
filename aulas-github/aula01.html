@@ -3,18 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Configurando GitHub no Windows | Guia Prático</title>
-    <link rel="stylesheet" href="/css/git-hub-css/aula01.css" />
+    <title>Aula 01</title>
+    <link rel="stylesheet" href="../style-home.css" />
+    <style>
+      body {
+        background-color: #1a1d23;
+        color: #ffffff;
+        font-family: sans-serif;
+        margin: 0;
+      }
+      header {
+        background-color: #24292e;
+        padding: 30px;
+        text-align: center;
+        border-bottom: 1px solid #30363d;
+      }
+      .container {
+        max-width: 850px;
+        margin: auto;
+        padding: 20px;
+      }
+      h2 {
+        color: #58a6ff;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+      }
+      pre {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        padding: 15px;
+        border-radius: 6px;
+      }
+      code {
+        font-family: monospace;
+        color: #e6edf3;
+      }
+      .btn-voltar {
+        display: block;
+        width: fit-content;
+        margin: 40px auto;
+        padding: 10px 20px;
+        background: #21262d;
+        color: #58a6ff;
+        text-decoration: none;
+        border-radius: 6px;
+        border: 1px solid #30363d;
+      }
+      /* Bloco de código completo (o retângulo preto) */
+      pre {
+        background-color: #0d1117 !important; /* Fundo bem escuro (estilo GitHub Dark) */
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 16px;
+        overflow-x: auto;
+        margin: 20px 0;
+      }
+
+      /* O texto dentro do bloco de código */
+      pre code {
+        color: #e6edf3 !important; /* Cor do texto clara e legível */
+        background-color: transparent !important; /* Mata o fundo branco indesejado */
+        font-family: "Cascadia Code", "Source Code Pro", monospace;
+        font-size: 0.95em;
+        padding: 0; /* Remove padding interno que pode causar manchas */
+      }
+
+      /* Estilo para código "inline" (quando você cita um comando no meio de um texto) */
+      p code,
+      li code {
+        background-color: rgba(110, 118, 129, 0.4) !important;
+        color: #e6edf3;
+        padding: 0.2em 0.4em;
+        border-radius: 6px;
+        font-family: monospace;
+      }
+
+      /* Container principal dos comandos */
+      .code-block-vertical {
+        background-color: #0d1117 !important;
+        border: 1px solid #0b0738;
+        border-radius: 6px;
+        padding: 16px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Espaço entre as linhas de comando */
+      }
+
+      /* Os comandos em si */
+      .code-block-vertical code {
+        color: #e6edf3 !important;
+        background-color: transparent !important;
+        font-family: "Cascadia Code", "Source Code Pro", monospace;
+        font-size: 0.95em;
+        padding: 0 !important;
+        display: block;
+      }
+
+      /* Estilo para os comentários (#) dentro do bloco de código */
+      .code-block-vertical p {
+        color: #8b949e !important; /* Cinza de comentário */
+        margin: 0;
+        font-size: 0.9rem;
+        font-family: monospace;
+      }
+
+      /* Garante que códigos em parágrafos normais continuem funcionando */
+    </style>
   </head>
   <body>
     <header>
-      <h1>Git & GitHub no Windows</h1>
+      <h1>🚀 Git & GitHub no Windows</h1>
       <p>Do Zero ao seu primeiro Push</p>
-      <a
-        href="../index.html"
-        style="color: white; text-decoration: none; font-size: 0.9rem"
-        >← Voltar para Home</a
-      >
     </header>
 
     <main class="container">
@@ -76,13 +176,44 @@
           <code>git pull origin main</code>
         </div>
       </section>
+
+      <a href="../index.html" class="btn-voltar">← Voltar ao Início</a>
+
+      <section
+        style="
+          margin-top: 60px;
+          border-top: 1px solid #30363d;
+          padding-top: 40px;
+        "
+      >
+        <h2 style="text-align: center">💬 Dúvidas sobre esta aula</h2>
+        <p style="text-align: center; color: #8b949e">
+          Use este espaço para perguntas específicas sobre este tema.
+        </p>
+
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="MatheusAraujo25/portal-aluno"
+          data-repo-id="[SEU_ID]"
+          data-category="Q&A"
+          data-category-id="[SEU_ID]"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </section>
     </main>
 
-    <footer>
-      <p>
-        Dica: Use o <strong>Git Credential Manager</strong> (já vem no
-        instalador) para não precisar digitar senha toda hora.
-      </p>
+    <footer
+      style="text-align: center; padding: 30px; color: #666; font-size: 0.8em"
+    >
+      Portal do Aluno - Mogi Mirim 2026
     </footer>
   </body>
 </html>

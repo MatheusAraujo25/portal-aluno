@@ -3,80 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aula 02 | Autenticação no Windows</title>
+    <title>Aula 02</title>
     <link rel="stylesheet" href="../style-home.css" />
+    <style>
+      body {
+        background-color: #1a1d23;
+        color: #ffffff;
+        font-family: sans-serif;
+        margin: 0;
+      }
+      header {
+        background-color: #24292e;
+        padding: 30px;
+        text-align: center;
+        border-bottom: 1px solid #30363d;
+      }
+      .container {
+        max-width: 850px;
+        margin: auto;
+        padding: 20px;
+      }
+      h2 {
+        color: #58a6ff;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+      }
+      pre {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        padding: 15px;
+        border-radius: 6px;
+      }
+      code {
+        font-family: monospace;
+        color: #e6edf3;
+      }
+      .btn-voltar {
+        display: block;
+        width: fit-content;
+        margin: 40px auto;
+        padding: 10px 20px;
+        background: #21262d;
+        color: #58a6ff;
+        text-decoration: none;
+        border-radius: 6px;
+        border: 1px solid #30363d;
+      }
+      /* Bloco de código completo (o retângulo preto) */
+      pre {
+        background-color: #0d1117 !important; /* Fundo bem escuro (estilo GitHub Dark) */
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 16px;
+        overflow-x: auto;
+        margin: 20px 0;
+      }
+
+      /* O texto dentro do bloco de código */
+      pre code {
+        color: #e6edf3 !important; /* Cor do texto clara e legível */
+        background-color: transparent !important; /* Mata o fundo branco indesejado */
+        font-family: "Cascadia Code", "Source Code Pro", monospace;
+        font-size: 0.95em;
+        padding: 0; /* Remove padding interno que pode causar manchas */
+      }
+
+      /* Estilo para código "inline" (quando você cita um comando no meio de um texto) */
+      p code,
+      li code {
+        background-color: rgba(110, 118, 129, 0.4) !important;
+        color: #e6edf3;
+        padding: 0.2em 0.4em;
+        border-radius: 6px;
+        font-family: monospace;
+      }
+
+      /* Container principal dos comandos */
+      .code-block-vertical {
+        background-color: #0d1117 !important;
+        border: 1px solid #0b0738;
+        border-radius: 6px;
+        padding: 16px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Espaço entre as linhas de comando */
+      }
+
+      /* Os comandos em si */
+      .code-block-vertical code {
+        color: #e6edf3 !important;
+        background-color: transparent !important;
+        font-family: "Cascadia Code", "Source Code Pro", monospace;
+        font-size: 0.95em;
+        padding: 0 !important;
+        display: block;
+      }
+
+      /* Estilo para os comentários (#) dentro do bloco de código */
+      .code-block-vertical p {
+        color: #8b949e !important; /* Cinza de comentário */
+        margin: 0;
+        font-size: 0.9rem;
+        font-family: monospace;
+      }
+
+      /* Garante que códigos em parágrafos normais continuem funcionando */
+    </style>
   </head>
   <body>
     <header>
       <h1>🔑 Autenticação Sem Senha</h1>
       <p>Configurando o Git Credential Manager no Windows</p>
-      <a href="../git.html" class="back-link">← Voltar para Trilhas Git</a>
     </header>
 
     <main class="container">
-      <section class="card" style="border-left: 5px solid #f59e0b">
-        <h3>🧐 Cansado de digitar a senha?</h3>
+      <section class="step">
+        <h2>🛠️ Como Ativar (Passo a Passo)</h2>
+        <h2>Passo 1</h2>
+        <p>Abra o seu Git Bash (ou Terminal do Windows).</p>
+      </section>
+
+      <section class="step">
+        <h2>Passo 2</h2>
+        <p>Digite o comando abaixo para ativar o gerenciador de credenciais:</p>
+        <div class="code-block-vertical">
+          <code>git config --global credential.helper manager</code>
+        </div>
+      </section>
+
+      <section class="step">
+        <h2>Resultado:</h2>
         <p>
-          Sempre que você faz um <code>git push</code> ou <code>pull</code>, o
-          Git pede suas credenciais. No Windows, podemos automatizar isso usando
-          o <strong>GCM (Git Credential Manager)</strong>.
+          Na próxima vez que você der um git push, abrirá uma janela do Windows
+          pedindo para você logar no navegador. Logue uma única vez e pronto!
         </p>
       </section>
+      <br />
+      <section>
+        <h2 style="text-align: center">💬 Dúvidas sobre esta aula</h2>
+        <p style="text-align: center; color: #8b949e">
+          Use este espaço para perguntas específicas sobre este tema.
+        </p>
 
-      <section class="cheat-sheet">
-        <h2>🛠️ Como Ativar (Passo a Passo)</h2>
-
-        <div class="code-block">
-          <code>Passo 1</code>
-          <p>Abra o seu <strong>Git Bash</strong> (ou Terminal do Windows).</p>
-        </div>
-
-        <div class="code-block">
-          <code>Passo 2</code>
-          <p>
-            Digite o comando abaixo para ativar o gerenciador de credenciais:
-          </p>
-        </div>
-
-        <div
-          style="
-            background: #1e293b;
-            color: #38bdf8;
-            padding: 1.5rem;
-            border-radius: 8px;
-            font-family: monospace;
-            margin-bottom: 1rem;
-          "
-        >
-          git config --global credential.helper manager
-        </div>
-
-        <div class="code-block">
-          <code>Passo 3</code>
-          <p>
-            Na próxima vez que você der um <code>git push</code>, abrirá uma
-            janela do Windows pedindo para você logar no navegador.
-            <strong>Logue uma única vez e pronto!</strong>
-          </p>
-        </div>
-      </section>
-
-      <section class="resources-section">
-        <h2>💡 Dica de Mestre</h2>
-        <div class="resource-card">
-          <h4>Onde ficam guardadas?</h4>
-          <p>
-            O Windows guarda essas senhas no
-            <strong>"Gerenciador de Credenciais"</strong> do próprio Painel de
-            Controle. Se você trocar de senha no GitHub, é lá que você deve
-            apagar a antiga.
-          </p>
-        </div>
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="MatheusAraujo25/portal-aluno"
+          data-repo-id="[SEU_ID]"
+          data-category="Q&A"
+          data-category-id="[SEU_ID]"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          crossorigin="anonymous"
+          async
+        ></script>
       </section>
     </main>
 
-    <footer>
-      <p>Matheus Ribeiro - Professor SEDUC-SP | mribeiro.dev</p>
+    <a href="../index.html" class="btn-voltar">← Voltar ao Início</a>
+
+    <footer
+      style="text-align: center; padding: 30px; color: #666; font-size: 0.8em"
+    >
+      Portal do Aluno - Mogi Mirim 2026
     </footer>
   </body>
 </html>

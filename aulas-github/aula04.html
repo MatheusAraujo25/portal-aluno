@@ -3,72 +3,195 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aula 04 | Trabalhando com Branches</title>
+    <title>Aula 04</title>
     <link rel="stylesheet" href="../style-home.css" />
+    <style>
+      body {
+        background-color: #1a1d23;
+        color: #ffffff;
+        font-family: sans-serif;
+        margin: 0;
+      }
+      header {
+        background-color: #24292e;
+        padding: 30px;
+        text-align: center;
+        border-bottom: 1px solid #30363d;
+      }
+      .container {
+        max-width: 850px;
+        margin: auto;
+        padding: 20px;
+      }
+      h2 {
+        color: #58a6ff;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+      }
+      pre {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        padding: 15px;
+        border-radius: 6px;
+      }
+      code {
+        font-family: monospace;
+        color: #e6edf3;
+      }
+      .btn-voltar {
+        display: block;
+        width: fit-content;
+        margin: 40px auto;
+        padding: 10px 20px;
+        background: #21262d;
+        color: #58a6ff;
+        text-decoration: none;
+        border-radius: 6px;
+        border: 1px solid #30363d;
+      }
+      /* Bloco de código completo (o retângulo preto) */
+      pre {
+        background-color: #0d1117 !important; /* Fundo bem escuro (estilo GitHub Dark) */
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 16px;
+        overflow-x: auto;
+        margin: 20px 0;
+      }
+
+      /* O texto dentro do bloco de código */
+      pre code {
+        color: #e6edf3 !important; /* Cor do texto clara e legível */
+        background-color: transparent !important; /* Mata o fundo branco indesejado */
+        font-family: "Cascadia Code", "Source Code Pro", monospace;
+        font-size: 0.95em;
+        padding: 0; /* Remove padding interno que pode causar manchas */
+      }
+
+      /* Estilo para código "inline" (quando você cita um comando no meio de um texto) */
+      p code,
+      li code {
+        background-color: rgba(110, 118, 129, 0.4) !important;
+        color: #e6edf3;
+        padding: 0.2em 0.4em;
+        border-radius: 6px;
+        font-family: monospace;
+      }
+
+      /* Container principal dos comandos */
+      .code-block-vertical {
+        background-color: #0d1117 !important;
+        border: 1px solid #0b0738;
+        border-radius: 6px;
+        padding: 16px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Espaço entre as linhas de comando */
+      }
+
+      /* Os comandos em si */
+      .code-block-vertical code {
+        color: #e6edf3 !important;
+        background-color: transparent !important;
+        font-family: "Cascadia Code", "Source Code Pro", monospace;
+        font-size: 0.95em;
+        padding: 0 !important;
+        display: block;
+      }
+
+      /* Estilo para os comentários (#) dentro do bloco de código */
+      .code-block-vertical p {
+        color: #8b949e !important; /* Cinza de comentário */
+        margin: 0;
+        font-size: 0.9rem;
+        font-family: monospace;
+      }
+
+      /* Garante que códigos em parágrafos normais continuem funcionando */
+    </style>
   </head>
   <body>
     <header>
-      <h1>🌿 Criando Branches</h1>
-      <p>Trabalhe em novas funcionalidades sem medo de errar.</p>
-      <a href="../git.html" class="back-link">← Voltar para Trilhas Git</a>
+      <h1>🚀 O Ciclo de Vida do Código</h1>
+      <p>Entendendo o Add, Commit e Push na prática.</p>
     </header>
 
     <main class="container">
-      <section class="card">
-        <h3>🌳 O que é uma Branch?</h3>
+      <section class="step">
+        <h2>📦 Os 3 Estados do Git</h2>
+        <ul>
+          <li>Working Directory: Sua mesa de trabalho (arquivos alterados).</li>
+
+          <li>Staging Area (Add): Colocar o item dentro da caixa de envio.</li>
+          <li>
+            Repository (Commit): Lacrar a caixa e colocar um selo com data
+            enome.
+          </li>
+        </ul>
+        <br />
+      </section>
+
+      <section class="step">
+        <h2>💻 Comandos na Ordem Correta</h2>
+        <h3>Lembre-se essa é a base do git</h3>
         <p>
-          Imagine que o seu código é o tronco de uma árvore (a
-          <code>main</code>). Uma <strong>Branch</strong> é um galho que sai
-          desse tronco.
+          <strong style="color: #a302ee">git add . </strong> - Prepara todos os
+          arquivos alterados para o envio.
         </p>
         <p>
-          Você pode testar coisas novas no galho. Se der errado, o tronco
-          continua intacto!
+          <strong style="color: #a302ee"> git commit -m "texto" </strong> - Cria
+          uma versão local. Use mensagens claras como: "Ajuste no layout do
+          login".
+        </p>
+        <p>
+          <strong style="color: #a302ee">git push origin main </strong> - Envia
+          sua "caixa lacrada" para o servidor do GitHub
+        </p>
+        <br />
+      </section>
+
+      <section class="step">
+        <h2>⚠️ Erro Comum:</h2>
+        <h3>Esquecer o Commit</h3>
+        <p>
+          Muitos alunos tentam dar Push direto após o Add. Lembre-se: O Push
+          envia Commits, não arquivos soltos!
         </p>
       </section>
 
-      <section class="cheat-sheet">
-        <h2>🛠️ Comandos de Ramificação</h2>
+      <br />
+      <section>
+        <h2 style="text-align: center">💬 Dúvidas sobre esta aula</h2>
+        <p style="text-align: center; color: #8b949e">
+          Use este espaço para perguntas específicas sobre este tema.
+        </p>
 
-        <div class="code-block">
-          <code>git checkout -b nome</code>
-          <p>Cria uma nova branch e já "pula" para dentro dela.</p>
-        </div>
-
-        <div class="code-block">
-          <code>git branch</code>
-          <p>
-            Lista todas as branches. A que estiver com asterisco (*) é a que
-            você está usando.
-          </p>
-        </div>
-
-        <div class="code-block">
-          <code>git checkout main</code>
-          <p>Volta para a branch principal (o tronco da árvore).</p>
-        </div>
-
-        <div class="code-block">
-          <code>git merge nome</code>
-          <p>Une as alterações do seu "galho" de volta ao tronco principal.</p>
-        </div>
-      </section>
-
-      <section class="resources-section">
-        <h2>💡 Dica para o TCC</h2>
-        <div class="resource-card" style="border-left-color: #10b981">
-          <h4>Organização em Grupo</h4>
-          <p>
-            Cada aluno deve ter sua própria branch (ex:
-            <code>dev-matheus</code>). Nunca façam commits direto na
-            <code>main</code> ao mesmo tempo para evitar conflitos!
-          </p>
-        </div>
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="MatheusAraujo25/portal-aluno"
+          data-repo-id="[SEU_ID]"
+          data-category="Q&A"
+          data-category-id="[SEU_ID]"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          crossorigin="anonymous"
+          async
+        ></script>
       </section>
     </main>
 
-    <footer>
-      <p>Professor Matheus Ribeiro | SEDUC-SP</p>
+    <a href="../index.html" class="btn-voltar">← Voltar ao Início</a>
+
+    <footer
+      style="text-align: center; padding: 30px; color: #666; font-size: 0.8em"
+    >
+      Portal do Aluno - Mogi Mirim 2026
     </footer>
   </body>
 </html>
